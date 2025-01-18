@@ -1,3 +1,4 @@
+using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Shapes;
@@ -22,7 +23,7 @@ public sealed class RiotHorizontalProgress : Control
         set { SetValue(MaximumProperty, value); }
     }
 
-    private Rectangle _backgroundRect;
+    private Rectangle _backgroundRect;                                      
     private Rectangle _foregroundRect;
 
     public RiotHorizontalProgress()
@@ -48,7 +49,7 @@ public sealed class RiotHorizontalProgress : Control
     private void HorizontalProgress_SizeChanged(object sender, SizeChangedEventArgs e)
     {
         UpdateProgressBar();
-    }
+    } 
 
     private void UpdateProgressBar()
     {
