@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <DefineSilverlight>true</DefineSilverlight>
+    <LangVersion>12</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Local\Converters\InputModeToVisibilityConverter.cs" />
+    <Compile Include="Local\Datas\StoreChampDataLoader.cs" />
+    <Compile Include="Local\ViewModels\GeneralContentViewModel.cs" />
+    <Compile Include="Local\ViewModels\VoiceContentViewModel.cs" />
+    <Compile Include="UI\Views\ChatContent.cs" />
+    <Compile Include="UI\Views\GeneralContent.cs" />
+    <Compile Include="UI\Views\HotKeyContent.cs" />
+    <Compile Include="UI\Views\NoticeContent.cs" />
+    <Compile Include="UI\Views\SoundContent.cs" />
+    <Compile Include="UI\Views\VoiceContent.cs" />
+    <Compile Include="UI\Views\VolumeContent.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenSilver" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Views\ChatContent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Views\GeneralContent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Views\HotKeyContent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Views\NoticeContent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Views\SoundContent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Views\VoiceContent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Views\VolumeContent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Leagueoflegends.Support\Leagueoflegends.Support.csproj" />
+  </ItemGroup>
+
+</Project>

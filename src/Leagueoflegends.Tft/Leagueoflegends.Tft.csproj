@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <DefineSilverlight>true</DefineSilverlight>
+    <LangVersion>12</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenSilver" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Local\Datas\TeamFightsDataLoader.cs" />
+    <Compile Include="Local\ViewModels\TftContentViewModel.cs" />
+    <Compile Include="UI\Views\TftContent.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Views\TftContent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Leagueoflegends.Support\Leagueoflegends.Support.csproj" />
+  </ItemGroup>
+
+</Project>

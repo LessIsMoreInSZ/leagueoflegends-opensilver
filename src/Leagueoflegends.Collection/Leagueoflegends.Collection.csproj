@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <DefineSilverlight>true</DefineSilverlight>
+    <LangVersion>12</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenSilver" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Local\Datas\ChampStatsDataLoader.cs" />
+    <Compile Include="Local\Datas\OptionDataLoader.cs" />
+    <Compile Include="Local\Datas\SkinsDataLoader.cs" />
+    <Compile Include="Local\Datas\SpellsDataLoader.cs" />
+    <Compile Include="Local\ViewModels\ChampionsContentViewModel.cs" />
+    <Compile Include="Local\ViewModels\SkinsContentViewModel.cs" />
+    <Compile Include="Local\ViewModels\SpellsContentViewModel.cs" />
+    <Compile Include="UI\Views\ChampionsContent.cs" />
+    <Compile Include="UI\Views\SkinsContent.cs" />
+    <Compile Include="UI\Views\SpellsContent.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Views\ChampionsContent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Views\SkinsContent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Views\SpellsContent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Leagueoflegends.Support\Leagueoflegends.Support.csproj" />
+  </ItemGroup>
+
+</Project>

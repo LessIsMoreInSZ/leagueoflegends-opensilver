@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <DefineSilverlight>true</DefineSilverlight>
+    <LangVersion>12</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenSilver" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Local\Datas\MenuDataLoader.cs" />
+    <Compile Include="Local\Datas\SubMenuDataLoader.cs" />
+    <Compile Include="Local\Services\MenuManager.cs" />
+    <Compile Include="Local\Services\SubMenuNavigator.cs" />
+    <Compile Include="Local\ViewModels\OptionMenuContentViewModel.cs" />
+    <Compile Include="Local\ViewModels\SubMenuContentViewModel.cs" />
+    <Compile Include="UI\Views\OptionMenuContent.cs" />
+    <Compile Include="UI\Views\SubNavContent.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Views\OptionMenuContent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Views\SubMenuContent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Leagueoflegends.Support\Leagueoflegends.Support.csproj" />
+  </ItemGroup>
+
+</Project>
