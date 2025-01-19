@@ -23,7 +23,7 @@ public sealed class RiotHorizontalProgress : Control
         set { SetValue(MaximumProperty, value); }
     }
 
-    private Rectangle _backgroundRect;                                      
+    private Rectangle _backgroundRect;
     private Rectangle _foregroundRect;
 
     public RiotHorizontalProgress()
@@ -49,7 +49,7 @@ public sealed class RiotHorizontalProgress : Control
     private void HorizontalProgress_SizeChanged(object sender, SizeChangedEventArgs e)
     {
         UpdateProgressBar();
-    } 
+    }
 
     private void UpdateProgressBar()
     {
