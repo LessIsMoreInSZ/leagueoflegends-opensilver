@@ -40,22 +40,20 @@
         <Setter Property="Fill" Value="#FFFFFF"/>
     </Style>
 
-    <Style x:Key="OuterBorderStyle" TargetType="Border">
+    <Style x:Key="OuterBorderStyle" TargetType="Ellipse">
         <Setter Property="Width" Value="30"/>
         <Setter Property="Height" Value="30"/>
-        <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="CornerRadius" Value="15"/>
-        <Setter Property="BorderBrush" Value="{StaticResource OuterBorderBrush}"/>
-        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="Fill" Value="Transparent"/>
+        <Setter Property="Stroke" Value="{StaticResource OuterBorderBrush}"/>
+        <Setter Property="StrokeThickness" Value="2"/>
     </Style>
 
-    <Style x:Key="InnerBorderStyle" TargetType="Border">
+    <Style x:Key="InnerBorderStyle" TargetType="Ellipse">
         <Setter Property="Width" Value="22"/>
         <Setter Property="Height" Value="22"/>
-        <Setter Property="CornerRadius" Value="11"/>
-        <Setter Property="Background" Value="{StaticResource InnerBackgroundBrush}"/>
-        <Setter Property="BorderBrush" Value="{StaticResource OuterBorderBrush}"/>
-        <Setter Property="BorderThickness" Value="1.5"/>
+        <Setter Property="Fill" Value="{StaticResource InnerBackgroundBrush}"/>
+        <Setter Property="Stroke" Value="{StaticResource OuterBorderBrush}"/>
+        <Setter Property="StrokeThickness" Value="1.5"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
@@ -75,10 +73,10 @@
                                 <VisualState x:Name="Normal"/>
                                 <VisualState x:Name="MouseOver">
                                     <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="BorderBrush">
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="Stroke">
                                             <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource OuterBorderHoverBrush}"/>
                                         </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="Background">
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="Stroke">
                                             <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource InnerBackgroundHoverBrush}"/>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
@@ -87,11 +85,14 @@
                                 <VisualState x:Name="Disabled"/>
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
-                        <Border x:Name="OuterBorder" Style="{StaticResource OuterBorderStyle}">
+                        <Ellipse x:Name="OuterBorder" Style="{StaticResource OuterBorderStyle}"/>
+                        <Ellipse x:Name="InnerBorder" Style="{StaticResource InnerBorderStyle}"/>
+                        <Path Style="{StaticResource NoticePathStyle}"/>
+                        <!--<Border x:Name="OuterBorder" Style="{StaticResource OuterBorderStyle}">
                             <Border x:Name="InnerBorder" Style="{StaticResource InnerBorderStyle}">
                                 <Path Style="{StaticResource NoticePathStyle}"/>
                             </Border>
-                        </Border>
+                        </Border>-->
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>

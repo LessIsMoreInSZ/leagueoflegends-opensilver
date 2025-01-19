@@ -128,29 +128,8 @@
                         <Image Style="{StaticResource Emblem}"/>
                         <Border Style="{StaticResource GreenLine}"/>
                         <Path x:Name="path" Style="{StaticResource Arrow}"/>
-                        <TextBlock x:Name="PlayText" Style="{StaticResource ContentStyle}" Text="PLAY"/>
+                        <TextBlock x:Name="PlayText" Style="{StaticResource ContentStyle}" Text="{TemplateBinding Content}"/>
                     </Grid>
-                    <!--<ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="path" Property="Fill" Value="{StaticResource ArrowFillOver}"/>
-                            <Setter TargetName="path" Property="Stroke" Value="{StaticResource ArrowStrokeOver}"/>
-                            <Setter TargetName="ContentPresenter" Property="Foreground" Value="#FFFCF1DC"/>
-                        </Trigger>
-                        <Trigger Property="IsChecked" Value="True">
-                            <Setter TargetName="path" Property="Fill" Value="#1E2328"/>
-                            <Setter TargetName="path" Property="Stroke" Value="#5C5B57"/>
-                            <Setter TargetName="ContentPresenter" Property="Foreground" Value="#3C3C41"/>
-                        </Trigger>
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="IsChecked" Value="True"/>
-                                <Condition Property="IsMouseOver" Value="True"/>
-                            </MultiTrigger.Conditions>
-                            <Setter TargetName="path" Property="Fill" Value="{StaticResource ArrowFillOver}"/>
-                            <Setter TargetName="path" Property="Stroke" Value="{StaticResource ArrowStrokeOver}"/>
-                            <Setter TargetName="ContentPresenter" Property="Foreground" Value="#FFFCF1DC"/>
-                        </MultiTrigger>
-                    </ControlTemplate.Triggers>-->
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
