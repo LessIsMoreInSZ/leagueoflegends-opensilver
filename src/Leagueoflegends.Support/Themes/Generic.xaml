@@ -54,6 +54,7 @@
     <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotFriendListBox.xaml"/>
     <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotMainMenu.xaml"/>
     <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotMainIconMenu.xaml"/>
+        <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotChampionAvatar.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotChampSkinItemControl.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotChampSkinGroupItem.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotChampSkinListBox.xaml"/>

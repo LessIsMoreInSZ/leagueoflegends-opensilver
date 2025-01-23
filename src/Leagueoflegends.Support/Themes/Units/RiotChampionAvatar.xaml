@@ -62,7 +62,8 @@
                             </Border.Background>
                         </Border>
                         <Border x:Name="LevelBorder" Style="{StaticResource ChampionLevelBorderStyle}">
-                            <TextBlock x:Name="LevelText" Style="{StaticResource LevelTextBlockStyle}" Text="{TemplateBinding Level}"/>
+                            <TextBlock x:Name="LevelText" Style="{StaticResource LevelTextBlockStyle}" 
+                                       Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Level}"/>
                         </Border>
                     </Grid>
                 </ControlTemplate>

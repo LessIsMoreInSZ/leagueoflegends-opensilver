@@ -33,19 +33,17 @@
         <GradientStop Color="#1e2328" Offset="1"/>
     </LinearGradientBrush>
 
-    <Style x:Key="MainBorderStyle" TargetType="Border">
-        <Setter Property="BorderBrush" Value="{StaticResource RiotButtonBorderBrush}"/>
-        <Setter Property="CornerRadius" Value="20"/>
-        <Setter Property="Background" Value="#1E2328"/>
-        <Setter Property="BorderThickness" Value="2.5"/>
+    <Style x:Key="MainBorderStyle" TargetType="Ellipse">
+        <Setter Property="Stroke" Value="{StaticResource RiotButtonBorderBrush}"/>
+        <Setter Property="Fill" Value="#1E2328"/>
+        <Setter Property="StrokeThickness" Value="2.5"/>
         <Setter Property="Margin" Value="0 0 0 0"/>
     </Style>
 
-    <Style x:Key="InnerBorderStyle" TargetType="Border">
-        <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="BorderBrush" Value="#14171A"/>
-        <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="CornerRadius" Value="20"/>
+    <Style x:Key="InnerBorderStyle" TargetType="Ellipse">
+        <Setter Property="Fill" Value="Transparent"/>
+        <Setter Property="Stroke" Value="#14171A"/>
+        <Setter Property="StrokeThickness" Value="1"/>
     </Style>
 
     <Style x:Key="CirclePathStyle" TargetType="Path">
@@ -64,16 +62,16 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="units:RiotCircleButton">
-                    <Border x:Name="BorderOuter" Style="{StaticResource MainBorderStyle}">
+                    <Grid>
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
                                 <VisualState x:Name="Normal"/>
                                 <VisualState x:Name="MouseOver">
                                     <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderOuter" Storyboard.TargetProperty="BorderBrush">
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderOuter" Storyboard.TargetProperty="Stroke">
                                             <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource RiotButtonBorderBrushHover}"/>
                                         </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderOuter" Storyboard.TargetProperty="Background">
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderOuter" Storyboard.TargetProperty="Fill">
                                             <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource RiotButtonBackgroundHover}"/>
                                         </ObjectAnimationUsingKeyFrames>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Icon" Storyboard.TargetProperty="Fill">
@@ -87,10 +85,10 @@
                                 </VisualState>
                                 <VisualState x:Name="Pressed">
                                     <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderOuter" Storyboard.TargetProperty="BorderBrush">
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderOuter" Storyboard.TargetProperty="Stroke">
                                             <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource RiotButtonBorderBrushPressed}"/>
                                         </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderOuter" Storyboard.TargetProperty="Background">
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderOuter" Storyboard.TargetProperty="Fill">
                                             <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource RiotButtonBackgroundPressed}"/>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
@@ -121,10 +119,10 @@
                                 </VisualState>
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
-                        <Border x:Name="BorderInner" Style="{StaticResource InnerBorderStyle}">
-                            <Path x:Name="Icon" Style="{StaticResource CirclePathStyle}"/>
-                        </Border>
-                    </Border>
+                        <Ellipse x:Name="BorderOuter" Style="{StaticResource MainBorderStyle}"/>
+                        <Ellipse x:Name="BorderInner" Style="{StaticResource InnerBorderStyle}"/>
+                        <Path x:Name="Icon" Style="{StaticResource CirclePathStyle}"/>    
+                    </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
