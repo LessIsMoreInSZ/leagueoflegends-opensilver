@@ -64,7 +64,6 @@
 - Visual Studio 2022 이상
 - .NET 8.0 SDK
 - OpenSilver SDK
-- Node.js 및 npm
 
 ### 설치 및 실행
 #### 1. 저장소 복제:
