@@ -11,6 +11,9 @@ This is a high-quality reproduction project of the League of Legends client usin
 [![Forks](https://img.shields.io/github/forks/jamesnetgroup/leagueoflegends-opensilver.svg)](https://github.com/jamesnetgroup/leagueoflegends-opensilver/network/members)
 [![Issues](https://img.shields.io/github/issues/jamesnetgroup/leagueoflegends-opensilver.svg)](https://github.com/jamesnetgroup/leagueoflegends-opensilver/issues)
 
+## View Project Online
+🌐 **[View Project Online](https://xaml.azurewebsites.net/)** - View the project directly in your browser!
+
 #### League of Legends XAML-Based Series:
 [League of Legends Client (WPF)](https://github.com/jamesnetgroup/leagueoflegends-wpf)  
 [League of Legends Client (Uno-Platform)](https://github.com/jamesnetgroup/leagueoflegends-uno)  
