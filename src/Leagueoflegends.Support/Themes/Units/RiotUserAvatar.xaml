@@ -92,7 +92,7 @@
     <Style x:Key="InnerBorderStyle" TargetType="Border">
         <Setter Property="Margin" Value="4"/>
         <Setter Property="BorderThickness" Value="2"/>
-        <Setter Property="BorderBrush" Value="{StaticResource ImageBorder}"/>
+        <Setter Property="BorderBrush" Value="#A47D30"/>
         <Setter Property="Background" Value="#01070D"/>
         <Setter Property="CornerRadius" Value="50"/>
     </Style>
@@ -113,7 +113,7 @@
                                             <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ImageBorderHover}"/>
                                         </ObjectAnimationUsingKeyFrames>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="border3" Storyboard.TargetProperty="BorderBrush">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ImageBorderHover}"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#C5A668"/>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -122,11 +122,14 @@
                         </VisualStateManager.VisualStateGroups>
                         <Border x:Name="border1" Style="{StaticResource OuterBorderStyle}">
                             <Border x:Name="border2" Style="{StaticResource MiddleBorderStyle}">
-                                <Border x:Name="border3" Style="{StaticResource InnerBorderStyle}">
-                                    <Border.Background>
-                                        <ImageBrush ImageSource="{x:Static image:ImageManager.DefaultProfileImageSource}"/>
-                                    </Border.Background>
-                                </Border>
+                                <Grid>
+                                    <Border x:Name="border3" Style="{StaticResource InnerBorderStyle}"/>
+                                    <Border Margin="4" CornerRadius="200">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="{x:Static image:ImageManager.DefaultProfileImageSource}"/>
+                                        </Border.Background>
+                                    </Border>
+                                </Grid>
                             </Border>
                         </Border>
                         <Control Style="{StaticResource ControlLabelStyle}"/>

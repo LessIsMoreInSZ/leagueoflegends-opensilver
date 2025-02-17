@@ -63,5 +63,8 @@ namespace Leagueoflegends.Support.Local.Services
         public static ImageSource LuxWallpaperImageSource => new BitmapImage(new Uri($"{ImagePath}/wallpaper-lux.jpg", UriKind.RelativeOrAbsolute));
         public static ImageSource MaokaiWallpaperImageSource => new BitmapImage(new Uri($"{ImagePath}/wallpaper-maokai.jpg", UriKind.RelativeOrAbsolute));
         public static ImageSource CaitlynWallpaperImageSource => new BitmapImage(new Uri($"{ImagePath}/wallpaper-caitlyn.jpg", UriKind.RelativeOrAbsolute));
+
+        public static ImageSource GitHubSource => new BitmapImage(new Uri($"{ImagePath}/publish/github.png", UriKind.RelativeOrAbsolute));
+        public static ImageSource OpenSilverSource => new BitmapImage(new Uri($"{ImagePath}/publish/opensilver.png", UriKind.RelativeOrAbsolute));
     }
 }

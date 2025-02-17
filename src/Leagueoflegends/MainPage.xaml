@@ -3,9 +3,31 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:image="clr-namespace:Leagueoflegends.Support.Local.Services;assembly=Leagueoflegends.Support"
       xmlns:based="clr-namespace:Jamesnet.Platform.OpenSilver;assembly=Jamesnet.Platform.OpenSilver"
       mc:Ignorable="d">
     <Grid Background="#000000">
-        <based:OpenSilverLayer LayerName="MainLayer"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Border Background="#FFFFFF">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <HyperlinkButton NavigateUri="https://opensilver.net" TargetName="_blank">
+                    <Image Source="{x:Static image:ImageManager.OpenSilverSource}" 
+                           VerticalAlignment="Center"
+                           Stretch="Uniform" 
+                           Margin="10" Height="30"/>
+                </HyperlinkButton>
+                <HyperlinkButton NavigateUri="https://github.com/jamesnetgroup/leagueoflegends-opensilver" TargetName="_blank">
+                    <Image Source="{x:Static image:ImageManager.GitHubSource}" 
+                           VerticalAlignment="Center"
+                           Stretch="Uniform" 
+                           Margin="10" Width="30" Height="30"/>
+                </HyperlinkButton>
+            </StackPanel>
+        </Border>
+        <based:OpenSilverLayer Grid.Row="1" LayerName="MainLayer"/>
     </Grid>
 </Page>

@@ -128,7 +128,7 @@
                         <Image Style="{StaticResource Emblem}"/>
                         <Border Style="{StaticResource GreenLine}"/>
                         <Path x:Name="path" Style="{StaticResource Arrow}"/>
-                        <TextBlock x:Name="PlayText" Style="{StaticResource ContentStyle}" Text="PLAY"/>
+                        <TextBlock x:Name="PlayText" Style="{StaticResource ContentStyle}" Text="{TemplateBinding Content}"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
