@@ -119,7 +119,7 @@ git clone https://github.com/jamesnetgroup/leagueoflegends-opensilver
 #### 3. 构建和运行
 - [x] 设置启动项目
 - [x] 按F5或点击运行按钮
-- [x] 推荐使用现代浏览器
+- [x] 推荐使用最新浏览器
 
 ## 学习机会
 本项目为开发者提供了宝贵的学习机会：
