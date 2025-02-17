@@ -16,25 +16,28 @@
         <GradientStop Color="#CC000000" Offset="1.0"/>
     </RadialGradientBrush>
 
-    <Style x:Key="CircleBorderStyle" TargetType="Ellipse">
+    <Style x:Key="CircleBorderStyle" TargetType="Border">
         <Setter Property="Width" Value="158"/>
         <Setter Property="Height" Value="158"/>
-        <Setter Property="Fill" Value="Transparent"/>
-        <Setter Property="Stroke" Value="{StaticResource ImageBorderBrush}"/>
-        <Setter Property="StrokeThickness" Value="2.5"/>
+        <Setter Property="CornerRadius" Value="300"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="#785A28"/>
+        <Setter Property="BorderThickness" Value="2.5"/>
+        <Setter Property="Margin" Value="0 14 0 30"/>
     </Style>
 
-    <Style x:Key="InnerCircleBorderStyle" TargetType="Ellipse">
-        <Setter Property="Margin" Value="14"/>
-        <Setter Property="Stroke" Value="{StaticResource ImageBorderBrush}"/>
-        <Setter Property="StrokeThickness" Value="1.5"/>
+    <Style x:Key="InnerCircleBorderStyle" TargetType="Border">
+        <Setter Property="Margin" Value="8"/>
+        <Setter Property="BorderBrush" Value="#785A28"/>
+        <Setter Property="BorderThickness" Value="1.5"/>
+        <Setter Property="CornerRadius" Value="300"/>
     </Style>
 
     <Style x:Key="OverlayBorderStyle" TargetType="Border">
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="BorderBrush" Value="#AA000000"/>
-        <Setter Property="Margin" Value="3"/>
-        <Setter Property="Background" Value="{StaticResource InnerCircleOverlayBrush}"/>
+        <Setter Property="Margin" Value="1"/>
+        <Setter Property="Background" Value="#463714"/>
         <Setter Property="CornerRadius" Value="300"/>
     </Style>
 
@@ -42,20 +45,20 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="units:RiotClashEmblem">
-                    <Grid x:Name="RootGrid" Background="Transparent" Width="158" Height="158" Margin="0 14 0 20">
+                    <Grid x:Name="RootGrid" Background="Transparent">
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
                                 <VisualState x:Name="Normal"/>
                                 <VisualState x:Name="MouseOver">
                                     <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="Stroke">
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="BorderBrush">
                                             <DiscreteObjectKeyFrame KeyTime="0">
                                                 <DiscreteObjectKeyFrame.Value>
                                                     <SolidColorBrush>#CBB883</SolidColorBrush>
                                                 </DiscreteObjectKeyFrame.Value>
                                             </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="Stroke">
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="BorderBrush">
                                             <DiscreteObjectKeyFrame KeyTime="0">
                                                 <DiscreteObjectKeyFrame.Value>
                                                     <SolidColorBrush>#CBB883</SolidColorBrush>
@@ -66,14 +69,14 @@
                                 </VisualState>
                                 <VisualState x:Name="Pressed">
                                     <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="Stroke">
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="BorderBrush">
                                             <DiscreteObjectKeyFrame KeyTime="0">
                                                 <DiscreteObjectKeyFrame.Value>
                                                     <SolidColorBrush>#785A28</SolidColorBrush>
                                                 </DiscreteObjectKeyFrame.Value>
                                             </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="Stroke">
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="BorderBrush">
                                             <DiscreteObjectKeyFrame KeyTime="0">
                                                 <DiscreteObjectKeyFrame.Value>
                                                     <SolidColorBrush>#785A28</SolidColorBrush>
@@ -91,14 +94,17 @@
                                 </VisualState>
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
-                        <Ellipse x:Name="OuterBorder" Style="{StaticResource CircleBorderStyle}"/>
-                        <Ellipse x:Name="InnerBorder" Style="{StaticResource InnerCircleBorderStyle}"/>
-                        <Border CornerRadius="300" Margin="15">
-                            <Border.Background>
-                                <ImageBrush ImageSource="{StaticResource SummaryImageSource}" Stretch="UniformToFill"/>
-                            </Border.Background>
+                        <Border x:Name="OuterBorder" Style="{StaticResource CircleBorderStyle}">
+                            <Grid>
+                                <Border x:Name="InnerBorder" Style="{StaticResource InnerCircleBorderStyle}"/>
+                                <Border x:Name="OverlayBorder" Style="{StaticResource OverlayBorderStyle}"/>
+                                <Border CornerRadius="200" Margin="4">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="{x:Static image:ImageManager.SummaryImageSource}" Stretch="UniformToFill"/>
+                                    </Border.Background>
+                                </Border>
+                            </Grid>
                         </Border>
-                        <Border x:Name="OverlayBorder" Style="{StaticResource OverlayBorderStyle}"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
