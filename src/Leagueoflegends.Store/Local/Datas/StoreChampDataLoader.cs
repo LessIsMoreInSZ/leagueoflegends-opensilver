@@ -1,6 +1,7 @@
 using Jamesnet.Foundation;
 using Leagueoflegends.Support.Local.Datas;
 using Leagueoflegends.Support.Local.Models;
+using Leagueoflegends.Support.Local.Services;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -23,7 +24,7 @@ public class StoreChampDataLoader : BaseResourceLoader<StoreChamp, List<StoreCha
             RP = item.GetValue<int>("rp"),
             BE = item.GetValue<int>("be"),
             IsLocked = item.GetValue<bool>("isLocked"),
-            ImageUrl = $"/Leagueoflegends.Support;component/Images/Stores/{item.GetValue<string>("image")}.png"
+            ImageUrl = $"{ImageManager.ImagePath}/Stores/{item.GetValue<string>("image")}.png"
         });
     }
 

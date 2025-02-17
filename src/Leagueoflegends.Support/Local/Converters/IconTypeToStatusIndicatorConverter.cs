@@ -1,3 +1,4 @@
+using Leagueoflegends.Support.Local.Services;
 using System;
 using System.Globalization;
 using System.Windows.Data;
@@ -6,8 +7,8 @@ namespace Leagueoflegends.Support.Local.Converters;
 
 public class IconTypeToStatusIndicatorConverter : IValueConverter
 {
-    private const string RpPath = "/Leagueoflegends.Support;component/Images/rp.png";
-    private const string BlueEssencePath = "/Leagueoflegends.Support;component/Images/blue-essence.png";
+    private static string RpPath = $"{ImageManager.ImagePath}/rp.png";
+    private static string BlueEssencePath = $"{ImageManager.ImagePath}/rp.pngng";
 
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {

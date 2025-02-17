@@ -1,6 +1,7 @@
 using Jamesnet.Foundation;
 using Leagueoflegends.Support.Local.Datas;
 using Leagueoflegends.Support.Local.Models;
+using Leagueoflegends.Support.Local.Services;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -33,7 +34,7 @@ public class ChampStatsDataLoader : BaseResourceLoader<ChampionStats, List<Champ
             Mastery = item.GetValue<int>("mastery"),
             Achievements = item.GetValue<int>("achievements"),
             Position = item.GetValue<string>("position"),
-            ImageUrl = $"/Leagueoflegends.Support;component/Images/Portraits/portrait_{item.GetValue<string>("name").Replace(" ", "").Replace("&", "").Replace(".", "").Replace("'", "").ToLower()}.jpg"
+            ImageUrl = $"{ImageManager.ImagePath}/Portraits/portrait_{item.GetValue<string>("name").Replace(" ", "").Replace("&", "").Replace(".", "").Replace("'", "").ToLower()}.jpg"
         });
     }
 

@@ -1,3 +1,4 @@
+using Leagueoflegends.Support.Local.Services;
 using System;
 using System.Globalization;
 using System.Windows.Data;
@@ -22,9 +23,9 @@ public class MenuNameToWallpaperConverter : IValueConverter
                 case "SHOP": fileName = "wallpaper-leesin.png"; break;
                 case "STORE": fileName = "wallpaper-maokai.jpg"; break;
             }
-            return $"/Leagueoflegends.Support;component/Images/{fileName}";
+            return $"{ImageManager.ImagePath}/{fileName}";
         }
-        return "/Leagueoflegends.Support;component/Images/wallpaper-rucian.png";
+        return $"{ImageManager.ImagePath}/wallpaper-rucian.png";
     }
 
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

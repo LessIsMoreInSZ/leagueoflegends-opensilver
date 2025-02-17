@@ -2,13 +2,8 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:system="clr-namespace:System;assembly=mscorlib"
+    xmlns:image="clr-namespace:Leagueoflegends.Support.Local.Services"
     xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
-
-    <ImageSource x:Key="TopPositionImageSource">/Leagueoflegends.Support;component/Images/Positions/top.png</ImageSource>
-    <ImageSource x:Key="JunglePositionImageSource">/Leagueoflegends.Support;component/Images/Positions/jungle.png</ImageSource>
-    <ImageSource x:Key="MidPositionImageSource">/Leagueoflegends.Support;component/Images/Positions/mid.png</ImageSource>
-    <ImageSource x:Key="BottomPositionImageSource">/Leagueoflegends.Support;component/Images/Positions/bottom.png</ImageSource>
-    <ImageSource x:Key="SupportPositionImageSource">/Leagueoflegends.Support;component/Images/Positions/support.png</ImageSource>
 
     <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="#1E2328"/>
 
@@ -46,7 +41,7 @@
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
-        <Setter Property="Source" Value="{StaticResource TopPositionImageSource}"/>
+        <Setter Property="Source" Value="{x:Static image:ImageManager.TopPositionImageSource}"/>
         <Setter Property="Width" Value="26"/>
         <Setter Property="Height" Value="26"/>
         <Setter Property="RenderTransform">
@@ -97,35 +92,35 @@
                                 <VisualState x:Name="Top">
                                     <Storyboard>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="icon" Storyboard.TargetProperty="Source">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource TopPositionImageSource}"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static image:ImageManager.TopPositionImageSource}"/>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
                                 <VisualState x:Name="Jungle">
                                     <Storyboard>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="icon" Storyboard.TargetProperty="Source">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource JunglePositionImageSource}"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static image:ImageManager.JunglePositionImageSource}"/>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
                                 <VisualState x:Name="Mid">
                                     <Storyboard>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="icon" Storyboard.TargetProperty="Source">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource MidPositionImageSource}"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static image:ImageManager.MidPositionImageSource}"/>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
                                 <VisualState x:Name="Bottom">
                                     <Storyboard>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="icon" Storyboard.TargetProperty="Source">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource BottomPositionImageSource}"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static image:ImageManager.BottomPositionImageSource}"/>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
                                 <VisualState x:Name="Support">
                                     <Storyboard>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="icon" Storyboard.TargetProperty="Source">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SupportPositionImageSource}"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static image:ImageManager.SupportPositionImageSource}"/>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>

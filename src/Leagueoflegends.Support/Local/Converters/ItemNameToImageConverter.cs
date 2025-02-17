@@ -1,3 +1,4 @@
+using Leagueoflegends.Support.Local.Services;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -7,7 +8,7 @@ namespace Leagueoflegends.Support.Local.Converters;
 
 public class ItemNameToImageConverter : IValueConverter
 {
-    private const string BaseImagePath = "/Leagueoflegends.Support;component/Images/Items/";
+    private static string BaseImagePath = $"{ImageManager.ImagePath}/Items/";
 
     private static readonly Dictionary<string, string> ItemNameToFileNameMap = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
     {

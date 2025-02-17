@@ -1,6 +1,7 @@
 using Jamesnet.Foundation;
 using Leagueoflegends.Support.Local.Datas;
 using Leagueoflegends.Support.Local.Models;
+using Leagueoflegends.Support.Local.Services;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -32,7 +33,7 @@ namespace Leagueoflegends.Collection.Local.Datas
                 {
                     Name = item.GetValue<string>("name"),
                     SkinName = item.GetValue<string>("skinName"),
-                    ImageUrl = $"/Leagueoflegends.Support;component/Images/Skins/{item.GetValue<string>("imageUrl")}",
+                    ImageUrl = $"{ImageManager.ImagePath}/Skins/{item.GetValue<string>("imageUrl")}",
                     IsPurchased = item.GetValue<bool>("isPurchased")
                 };
             });

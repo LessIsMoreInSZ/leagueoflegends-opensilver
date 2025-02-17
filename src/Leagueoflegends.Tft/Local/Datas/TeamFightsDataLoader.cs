@@ -1,6 +1,7 @@
 using Jamesnet.Foundation;
 using Leagueoflegends.Support.Local.Datas;
 using Leagueoflegends.Support.Local.Models;
+using Leagueoflegends.Support.Local.Services;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -22,7 +23,7 @@ public class TeamFightsDataLoader : BaseResourceLoader<TeamFight, List<TeamFight
             Level = item.GetValue<int>("level"),
             Explain = item.GetValue<string>("explain"),
             IsPremium = item.GetValue<bool>("isPremium"),
-            Image = $"/Leagueoflegends.Support;component/Images/TeamFights/{item.GetValue<string>("image")}",
+            Image = $"{ImageManager.ImagePath}/TeamFights/{item.GetValue<string>("image")}",
             IsFree = item.GetValue<bool>("isFree")
         });
     }

@@ -1,3 +1,4 @@
+using Leagueoflegends.Support.Local.Services;
 using System;
 using System.Globalization;
 using System.Windows.Data;
@@ -10,10 +11,10 @@ public class PercentToBadgeConverter : IValueConverter
         if (value is int percent)
         {
             return percent >= 50
-                ? "/Leagueoflegends.Support;component/Images/badge_champion2.png"
-                : "/Leagueoflegends.Support;component/Images/badge_champion1.png";
+                ? $"{ImageManager.ImagePath}/badge_champion2.png"
+                : $"{ImageManager.ImagePath}/badge_champion1.png";
         }
-        return "/Leagueoflegends.Support;component/Images/badge_champion1.png";
+        return $"{ImageManager.ImagePath}/badge_champion1.png";
     }
 
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

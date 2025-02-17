@@ -1,6 +1,7 @@
 using Jamesnet.Foundation;
 using Leagueoflegends.Support.Local.Datas;
 using Leagueoflegends.Support.Local.Models;
+using Leagueoflegends.Support.Local.Services;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -31,7 +32,7 @@ public class SpellsDataLoader : BaseResourceLoader<Spell, List<Spell>>, ISpellsD
                 TypesString = typesCommaSeparated,
                 Content = item.GetValue<string>("content"),
                 Delay = item.GetValue<int>("delay"),
-                ImageUrl = $"/Leagueoflegends.Support;component/Images/spell_{item.GetValue<string>("name").ToLower()}.png"
+                ImageUrl = $"{ImageManager.ImagePath}/spell_{item.GetValue<string>("name").ToLower()}.png"
             };
         });
     }

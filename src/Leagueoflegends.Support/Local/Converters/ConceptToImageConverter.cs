@@ -1,3 +1,4 @@
+using Leagueoflegends.Support.Local.Services;
 using System;
 using System.Globalization;
 using System.Windows.Data;
@@ -9,9 +10,9 @@ public class ConceptToImageConverter : IValueConverter
     {
         if (value is string concept)
         {
-            return $"/Leagueoflegends.Support;component/Images/Concepts/{concept}.png";
+            return $"{ImageManager.ImagePath}/Concepts/{concept}.png";
         }
-        return "/Leagueoflegends.Support;component/Images/Concepts/warrior.png";
+        return $"{ImageManager.ImagePath}/Concepts/warrior.png";
     }
 
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
