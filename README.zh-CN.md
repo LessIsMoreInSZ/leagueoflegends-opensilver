@@ -12,11 +12,11 @@
 [![Issues](https://img.shields.io/github/issues/jamesnetgroup/leagueoflegends-opensilver.svg)](https://github.com/jamesnetgroup/leagueoflegends-opensilver/issues)
 
 #### 英雄联盟XAML系列项目：
-[英雄联盟客户端 (WPF版本)](https://github.com/jamesnetgroup/leagueoflegends-wpf)  
-[英雄联盟客户端 (Uno-Platform版本)](https://github.com/jamesnetgroup/leagueoflegends-uno)  
-[英雄联盟客户端 (OpenSilver版本)](https://github.com/jamesnetgroup/leagueoflegends-opensilver)  
-[英雄联盟客户端 (UWP版本)](https://github.com/JamesnetGroup/leagueoflegends-uwp)  
-[英雄联盟客户端 (WinUI 3版本)](https://github.com/jamesnetgroup/leagueoflegends-winui3)
+[英雄联盟客户端 (WPF)](https://github.com/jamesnetgroup/leagueoflegends-wpf)  
+[英雄联盟客户端 (Uno-Platform)](https://github.com/jamesnetgroup/leagueoflegends-uno)  
+[英雄联盟客户端 (OpenSilver)](https://github.com/jamesnetgroup/leagueoflegends-opensilver)  
+[英雄联盟客户端 (UWP)](https://github.com/JamesnetGroup/leagueoflegends-uwp)  
+[英雄联盟客户端 (WinUI 3)](https://github.com/jamesnetgroup/leagueoflegends-winui3)
 
 ## 项目介绍
 
