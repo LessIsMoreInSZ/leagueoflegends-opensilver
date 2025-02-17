@@ -11,8 +11,12 @@ This is a high-quality reproduction project of the League of Legends client usin
 [![Forks](https://img.shields.io/github/forks/jamesnetgroup/leagueoflegends-opensilver.svg)](https://github.com/jamesnetgroup/leagueoflegends-opensilver/network/members)
 [![Issues](https://img.shields.io/github/issues/jamesnetgroup/leagueoflegends-opensilver.svg)](https://github.com/jamesnetgroup/leagueoflegends-opensilver/issues)
 
-## View Project Online
-🌐 **[View Project Online](https://xaml.azurewebsites.net/)** - View the project directly in your browser!
+
+<img src="https://github.com/user-attachments/assets/87f16ea6-0285-43b7-ad65-64e150792476" width="300"/>
+
+
+## Live OpenSilver
+🌐 **[Live OpenSilver](https://xaml.azurewebsites.net/)** - View the project directly in your browser!
 
 <img src="https://github.com/user-attachments/assets/47077b81-c4e9-478c-86c7-8affd17fb8ef" width="49%"/>
 <img src="https://github.com/user-attachments/assets/d2a8ec91-9a71-4cc2-903c-dc9b540f098b" width="49%"/>
@@ -20,8 +24,8 @@ This is a high-quality reproduction project of the League of Legends client usin
 
 #### League of Legends XAML-Based Series:
 [League of Legends Client (WPF)](https://github.com/jamesnetgroup/leagueoflegends-wpf)  
-[League of Legends Client (Uno-Platform)](https://github.com/jamesnetgroup/leagueoflegends-uno)  
 [League of Legends Client (OpenSilver)](https://github.com/jamesnetgroup/leagueoflegends-opensilver)  
+[League of Legends Client (Uno-Platform)](https://github.com/jamesnetgroup/leagueoflegends-uno)  
 [League of Legends Client (UWP)](https://github.com/JamesnetGroup/leagueoflegends-uwp)  
 [League of Legends Client (WinUI 3)](https://github.com/jamesnetgroup/leagueoflegends-winui3)
 
