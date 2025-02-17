@@ -2,11 +2,14 @@
 
 [![English](https://img.shields.io/badge/docs-English-blue.svg)](README.md) [![中文](https://img.shields.io/badge/docs-中文-red.svg)](README.zh-CN.md) [![한국어](https://img.shields.io/badge/docs-한국어-green.svg)](README.ko.md)
 
-This is a high-quality reproduction project of the League of Legends client using OpenSilver. The project showcases the capabilities of OpenSilver in creating modern web applications while maintaining XAML-based development patterns and demonstrates a comprehensive approach to building large-scale web applications.
+This is a high-quality reproduction project of the League of Legends client using OpenSilver 3.1. The project showcases the power of XAML-based development in the browser, demonstrating how traditional desktop application architecture can be effectively translated to web environments.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![.NET](https://img.shields.io/badge/.NET-8.0-blue.svg)](https://dotnet.microsoft.com/download)
-[![OpenSilver](https://img.shields.io/badge/OpenSilver-2.0-purple.svg)](https://opensilver.net)
+[![.NET](https://img.shields.io/badge/.NET-9.0-blue.svg)](https://dotnet.microsoft.com/download)
+[![OpenSilver](https://img.shields.io/badge/OpenSilver-3.1-purple.svg)](https://opensilver.net)
+[![Stars](https://img.shields.io/github/stars/jamesnetgroup/leagueoflegends-opensilver.svg)](https://github.com/jamesnetgroup/leagueoflegends-opensilver/stargazers)
+[![Forks](https://img.shields.io/github/forks/jamesnetgroup/leagueoflegends-opensilver.svg)](https://github.com/jamesnetgroup/leagueoflegends-opensilver/network/members)
+[![Issues](https://img.shields.io/github/issues/jamesnetgroup/leagueoflegends-opensilver.svg)](https://github.com/jamesnetgroup/leagueoflegends-opensilver/issues)
 
 #### League of Legends XAML-Based Series:
 [League of Legends Client (WPF)](https://github.com/jamesnetgroup/leagueoflegends-wpf)  
@@ -17,9 +20,15 @@ This is a high-quality reproduction project of the League of Legends client usin
 
 ## Project Introduction
 
-This OpenSilver version of the League of Legends client demonstrates how to leverage XAML-based development patterns in modern web applications. By utilizing OpenSilver's capabilities, we've created a web-based implementation that maintains the rich user experience of the original client while offering the advantages of web deployment.
+Our journey with XAML-based technologies began with WPF in 2008, and we've consistently demonstrated how powerful architectural patterns can transcend platform boundaries. The success of our WPF-based League of Legends client project has proven that well-structured XAML applications can be effectively adapted to various platforms - from WinUI 3 and UWP to cross-platform solutions like Uno Platform. Now, with OpenSilver 3.1, we're taking this same architectural excellence to the web.
 
-The project showcases how to implement large-scale web applications using OpenSilver, demonstrating best practices for web-specific optimizations while maintaining the familiar XAML development patterns. It provides valuable insights into building complex web applications that can run in any modern browser.
+This OpenSilver version represents more than just a port - it's a testament to the versatility of our architectural approach. By leveraging the same patterns that made our WPF version successful, we've created a web-based implementation that maintains the rich user experience and complex functionality of the original, while taking advantage of OpenSilver's modern web capabilities.
+
+What makes this project particularly significant is how it demonstrates the portability of well-designed XAML applications. The same modular architecture, CustomControls, and state management patterns that worked effectively in our desktop applications have been seamlessly translated to the web environment. This successful transition showcases how developers can leverage their existing XAML and C# expertise to create sophisticated web applications without sacrificing the architectural principles that make desktop applications robust and maintainable.
+
+The Jamesnet.Core framework, based on .NET Standard 2.0, continues to serve as our foundation, proving its versatility by working seamlessly across WPF, Uno Platform, and now OpenSilver. This consistency in our core framework demonstrates how well-designed architecture can adapt to new platforms while maintaining its fundamental strengths.
+
+This OpenSilver implementation opens new possibilities for web-based XAML applications, showing that the gap between desktop and web development can be bridged while maintaining the high standards of application architecture we've established in our other platform implementations.
 
 
 <img src="https://github.com/user-attachments/assets/3bc0d881-577e-4aa2-8802-698169d701a5" width="49%"/>
@@ -39,81 +48,93 @@ The project showcases how to implement large-scale web applications using OpenSi
 <img src="https://github.com/user-attachments/assets/642ccf0d-f2df-4adc-bb87-b1246cbda0b7" width="49%"/>
 <img src="https://github.com/user-attachments/assets/bece2bfd-1bb9-436e-b928-929d3706398c" width="49%"/>
 
-
 ## Core Technology Stack
-- [x] **Jamesnet.Core**: Cross-platform core library based on .NET Standard 2.0
-- [x] **Jamesnet.OpenSilver**: Web-optimized UI framework for OpenSilver applications
+> The repository includes all framework source code.
 
-These libraries have been specifically adapted for OpenSilver while maintaining compatibility with other XAML-based platforms in our series.
+- [x] **Jamesnet.Core**: Cross-platform core library based on .NET Standard 2.0
+- [x] **OpenSilver 3.1**: Modern Silverlight-compatible framework for web
+- [x] **Jamesnet.OpenSilver**: Web-optimized window management and UI framework
 
 ## Key Features and Implementations
 
 1. **Web-Optimized Architecture**
-   - [x] Browser-friendly modular design
+   - [x] Modular and distributed system design adapted for web
+   - [x] Browser-friendly state management
    - [x] Web-specific performance optimizations
-   - [x] Progressive loading patterns
 
 2. **Advanced OpenSilver Techniques**
-   - [x] Web-specific CustomControls implementation
-   - [x] Browser-based state management
-   - [x] Web-optimized resource management
+   - [x] Web-compatible CustomControls implementation
+   - [x] Browser-optimized state management
+   - [x] Web-specific rendering optimizations
 
 3. **Performance Optimization**
-   - [x] Browser memory optimization
-   - [x] Web-specific async patterns
+   - [x] Browser memory management
+   - [x] Web-specific asynchronous patterns
    - [x] Network-aware resource loading
 
 4. **UI/UX Design**
-   - [x] Web-compatible animations
-   - [x] Browser-optimized rendering
-   - [x] Responsive layout system
+   - [x] Web-compatible Geometry Path implementations
+   - [x] Browser-optimized animations
+   - [x] Responsive design adaptations
 
 5. **Framework Design**
-   - [x] Web-specific event system
-   - [x] Browser state management
-   - [x] Cross-browser compatibility
+   - [x] Web-compatible event system
+   - [x] Browser-state management patterns
+   - [x] Web-oriented navigation system
+
+This project comprehensively showcases advanced design patterns and techniques based on Jamesnet.Core and Jamesnet.OpenSilver while maximizing the powerful features of browser-based XAML development. By providing real-world application cases of various technologies and patterns necessary for large-scale web application development, it serves as rich learning material for developers looking to bridge the gap between desktop and web development.
+
+We hope this project will inspire developers in the XAML ecosystem and serve as a best practice for sophisticated web application development using OpenSilver. Furthermore, we expect that through this project, we can demonstrate how well-architected XAML applications can seamlessly transition between platforms - from desktop applications built with WPF to web applications powered by OpenSilver, opening new horizons for modern web development while maintaining the robust architecture and rich user experience that XAML is known for.
 
 ## Technology Stack
-- .NET 8.0
-- OpenSilver 2.0
+- .NET 9.0
+- OpenSilver 3.1
 - Jamesnet.Core
 - Jamesnet.OpenSilver
 
 ## Getting Started
 ### Prerequisites
 - Visual Studio 2022 or later
-- .NET 8.0 SDK
-- OpenSilver SDK
-- Node.js and npm
+- .NET 9.0 SDK
+- OpenSilver 3.1 SDK
+- Jamesnet.OpenSilver NuGet package
 
 ### Installation and Execution
 #### 1. Clone the repository:
-```bash
-git clone https://github.com/jamesnetgroup/leagueoflegends-opensilver.git
+
+```
+git clone https://github.com/jamesnet214/leagueoflegends-opensilver
 ```
 
-#### 2. Build and Run
-- Open the solution in Visual Studio 2022
-- Restore NuGet packages
-- Build the solution
-- Run using your preferred web browser
+#### 2. Open the solution
+- [x] Visual Studio
+- [x] Visual Studio Code
+- [x] JetBrains Rider
+
+<img src="https://github.com/user-attachments/assets/af70f422-7057-4e77-a54d-042ee8358d2a" width="32%"/>
+<img src="https://github.com/user-attachments/assets/e4feaa10-a107-4b58-8d13-1d8be620ec62" width="32%"/>
+<img src="https://github.com/user-attachments/assets/5ff487f6-55e4-43e1-9abf-f8d419ee6943" width="32%"/>
+
+#### 3. Build and Run
+- [x] Set the startup project
+- [x] Press F5 or click the Run button
+- [x] Windows 11 recommended
 
 ## Learning Opportunities
-This project offers valuable insights for OpenSilver developers:
-1. **Web Application Architecture**: Learn modern web application design patterns
-2. **Browser Optimization**: Understand web-specific performance considerations
-3. **XAML for Web**: Master XAML-based development for web applications
-4. **Cross-Browser Compatibility**: Learn techniques for ensuring consistent behavior
-5. **Web Resource Management**: Understand efficient resource loading patterns
+This project offers valuable insights for WPF developers:
+1. **Complex UI Recreation**: Learn techniques for recreating sophisticated user interfaces
+2. **Custom Control Development**: Understand the process of building custom WPF controls
+3. **MVVM in Practice**: See real-world implementation of MVVM pattern in a complex application
+4. **Geometry Path Usage**: Master the use of Geometry Path for intricate UI designs
+5. **Performance Optimization**: Learn strategies for optimizing large-scale WPF applications
 
 ## Contributing
-We welcome contributions to the League of Legends Client (OpenSilver) project! Feel free to submit issues, create pull requests, or suggest improvements.
+Contributions to the League of Legends Client (WPF) project are welcome! Feel free to submit issues, create pull requests, or suggest improvements.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Contact
 - Website: https://jamesnet.dev
 - Email: james@jamesnet.dev, vickyqu115@hotmail.com
 
-Experience the power of OpenSilver in creating modern web applications with this League of Legends client recreation!
+Experience the power of OpenSilver in bringing complex game interfaces to the web with this League of Legends client recreation!
