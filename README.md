@@ -114,7 +114,7 @@ We hope this project will inspire developers in the XAML ecosystem and serve as 
 #### 1. Clone the repository:
 
 ```
-git clone https://github.com/jamesnet214/leagueoflegends-opensilver
+git clone https://github.com/jamesnetgroup/leagueoflegends-opensilver
 ```
 
 #### 2. Open the solution
