@@ -1,6 +1,8 @@
 # 启动教程，这部分是酱醋茶瞎编的。。。
-![Uploading image.png…]()
-
+![alt text](image/Start.png)
+![alt text](image/StartOk.png)
+![alt text](image/VSTools.jpg)
+## 下面是原文档
 
 # League of Legends Client (OpenSilver)
 
