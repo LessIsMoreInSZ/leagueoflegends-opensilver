@@ -1,3 +1,7 @@
+# 启动教程，这部分是酱醋茶瞎编的。。。
+![Uploading image.png…]()
+
+
 # League of Legends Client (OpenSilver)
 
 [![English](https://img.shields.io/badge/docs-English-blue.svg)](README.md) [![中文](https://img.shields.io/badge/docs-中文-red.svg)](README.zh-CN.md) [![한국어](https://img.shields.io/badge/docs-한국어-green.svg)](README.ko.md)
